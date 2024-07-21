@@ -1,0 +1,38 @@
+.yoginfo-main-banner {
+    background-color: #FFFAF3;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+    padding-top: 120px;
+}
+
+.yoginfo-main-banner-content {
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.yoginfo-main-banner-content-text-animation {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.yoginfo-main-banner-content-text-animation h1 {
+    font-size: calc(3rem + 5vw);
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0;
+    font-weight: 100;
+    white-space: nowrap;
+    letter-spacing: 10px;
+}
+
+.yoginfo-main-banner-content-text-animation h1 b {
+    font-weight: 900;
+    margin-right: 120px;
+}
