@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../Components/Header/Header'
+import { Link } from 'react-router-dom'
 
 const Whydoyoga = () => {
   return (
@@ -14,6 +15,7 @@ const Whydoyoga = () => {
             <li>Boost immune system</li>
             <li>Cures hairfall problems</li>
         </ul>
+        <button className='shadow-dark shadow-lg px-4 py-2 rounded-md m-4'><Link to={`/`}>Back to Home</Link></button>
       </div>
     </>
   )

@@ -13,10 +13,8 @@ const Header = () => {
           </div>
           <nav className="main-navigation">
             <ul className='flex items-center gap-4'>
-                {/* <li><a href="#"></a></li> */}
-                <li> <Link to={`why`}>Why do yoga?</Link></li>
-                <li> <Link to={`how`}>How do yoga?</Link></li>
-                {/* <li><a href="#">How to do?</a></li> */}
+                <li> <Link to={`/why`}>Why do yoga?</Link></li>
+                <li> <Link to={`/how`}>How do yoga?</Link></li>
             </ul>
           </nav>
          </div>
