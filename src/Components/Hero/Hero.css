@@ -3,8 +3,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding-bottom: 60px;
-    padding-top: 120px;
+    padding-block: 150px;
 }
 
 .yoginfo-main-banner-content {
@@ -34,5 +33,5 @@
 
 .yoginfo-main-banner-content-text-animation h1 b {
     font-weight: 900;
-    margin-right: 120px;
+    margin-right: 25px;
 }
