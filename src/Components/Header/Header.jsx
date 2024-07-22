@@ -1,23 +1,25 @@
 import React from 'react'
-import { Outlet, Link } from "react-router-dom";
-import Whydoyoga from '../../Pages/Why/Whydoyoga';
+import { Outlet, Link, NavLink } from "react-router-dom";
+import "./Header.css"
+import { useState } from 'react';
 
 const Header = () => {
+  const [menu, setMenu] = useState(false)
   return (
-    <div className='header-main p-6' id='site-navigation'>
+    <div className='header-main p-6 bg-white shadow-sm md:shadow-none' id='site-navigation'>
         <div className="container mx-auto px-[15px]">
-         <div className="flex items-center justify-between">
+         <nav className="flex items-center justify-between">
           <div className="site-branding">
-            <h1 className='site-title'><Link to={`/`}><span className='font-black'>YOG</span>INFO</Link></h1>
-
+            <Link to={`/`}><span className='font-black'>YOG</span>INFO</Link>
           </div>
-          <nav className="main-navigation">
-            <ul className='flex items-center gap-4'>
-                <li> <Link to={`/why`}>Why do yoga?</Link></li>
-                <li> <Link to={`/how`}>How do yoga?</Link></li>
+          <div className="hamm" onClick={() => {setMenu(!menu)}}>≡</div>
+          <div className="main-navigation">
+            <ul className={menu ? "open" : ""}>
+                <li> <NavLink to={`/why`}>Why do yoga?</NavLink></li>
+                <li> <NavLink to={`/how`}>How do yoga?</NavLink></li>
             </ul>
-          </nav>
-         </div>
+          </div>
+         </nav>
         </div>
     </div>
   )

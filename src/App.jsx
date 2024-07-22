@@ -5,6 +5,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import Cards from './Components/Cards/Cards'
+import Slider from './Components/Slider/Slider'
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <Header/>
     <Hero/>
     <Cards/>
+    <Slider/>
     </>
   )
 }
