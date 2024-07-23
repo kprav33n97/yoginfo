@@ -4,6 +4,7 @@ import App from './App.jsx'
 import ErrorPage from './Components/Errorpage/Errorpage.jsx';
 import Whydoyoga from './Pages/Why/Whydoyoga.jsx';
 import Howdoyoga from './Pages/How/Howdoyoga.jsx';
+import Forms from './Components/Forms/Forms.jsx';
 import './index.css'
 import {
   createBrowserRouter,
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
   {
     path: "/how",
     element: <Howdoyoga/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/expense",
+    element: <Forms/>,
     errorElement: <ErrorPage />,
   },
 ]);

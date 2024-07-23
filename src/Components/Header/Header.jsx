@@ -17,6 +17,7 @@ const Header = () => {
             <ul className={menu ? "open" : ""}>
                 <li> <NavLink to={`/why`}>Why do yoga?</NavLink></li>
                 <li> <NavLink to={`/how`}>How do yoga?</NavLink></li>
+                <li> <NavLink to={`/expense`}>Track your expenses</NavLink></li>
             </ul>
           </div>
          </nav>
