@@ -12,9 +12,19 @@ const ExpenseForm = ({ setExpenses }) => {
   const [errors, setErrors] = useState({});
 
   const validationConfig = {
-    title: [{required: true, message: 'Please enter your title'}, {minLength: 5, message: 'Title should be atleast 5 characters long.'}],
-    category: [{required: true, message: 'Please select category'}],
-    amount: [{required: true, message: 'Please enter amount'}]
+    title: [
+      { required: true, message: 'Please enter title' },
+      { minLength: 5, message: 'Title should be at least 5 characters long' },
+    ],
+    category: [{ required: true, message: 'Please select a category' }],
+    amount: [{ required: true, message: 'Please enter an amount' }],
+    email: [
+      { required: true, message: 'Please enter an email' },
+      {
+        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        message: 'Please enter a valid email',
+      },
+    ],
   }
 
   const validate = (formData) => {
