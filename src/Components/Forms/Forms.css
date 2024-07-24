@@ -110,6 +110,19 @@
     background-color: #FFFAF3;
 }
 
+p.errormsg {
+    font-size: 12px;
+    color: red;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
 @media (max-width: 900px) {
     .expense-tracker {
         flex-direction: column;
