@@ -1,78 +1,107 @@
-import { useState } from "react";
-import Input from "./Input";
-import Select from "./Select";
+import React, { useEffect, useRef, useState } from 'react'
+import Input from './Input'
+import Select from './Select'
 
-const ExpenseForm = ({ setExpenses }) => {
-  const [expense, setExpense] = useState({
-    title: "",
-    category: "",
-    amount: "",
-  });
-
-  const [errors, setErrors] = useState({});
+export default function ExpenseForm({
+  expense,
+  setExpense,
+  setExpenses,
+  editingRowId,
+  setEditingRowId,
+}) {
+  const [errors, setErrors] = useState({})
 
   const validationConfig = {
     title: [
       { required: true, message: 'Please enter title' },
-      { minLength: 3, message: 'Title should be at least 3 characters long' },
+      { minLength: 2, message: 'Title should be at least 2 characters long' },
     ],
     category: [{ required: true, message: 'Please select a category' }],
-    amount: [{ required: true, message: 'Please enter an amount' }],
+    amount: [
+      {
+        required: true,
+        message: 'Please enter an amount',
+      },
+      {
+        pattern: /^[1-9]\d*(\.\d+)?$/,
+        message: 'Please enter a valid number',
+      },
+    ],
   }
 
   const validate = (formData) => {
-    const errorsData = {};
+    const errorsData = {}
 
-   Object.entries(formData).forEach(([key, value]) => {
-    validationConfig[key].forEach((rule) => {
-      if(rule.required && !value) {
-        errorsData[key] = rule.message
-      }
+    Object.entries(formData).forEach(([key, value]) => {
+      validationConfig[key].some((rule) => {
+        if (rule.required && !value) {
+          errorsData[key] = rule.message
+          return true
+        }
 
-      if(rule.minLength && value.length<5) {
-        errorsData[key] = rule.message
-      }
+        if (rule.minLength && value.length < rule.minLength) {
+          errorsData[key] = rule.message
+          return true
+        }
+
+        if (rule.pattern && !rule.pattern.test(value)) {
+          errorsData[key] = rule.message
+          return true
+        }
+      })
     })
-   })
 
-    // if (!formData.title) {
-    //   errorsData.title = "Title is required";
-    // }
-    // if (!formData.category) {
-    //   errorsData.category = "Category is required";
-    // }
-    // if (!formData.amount) {
-    //   errorsData.amount = "Amount is required";
-    // }
+    setErrors(errorsData)
+    return errorsData
+  }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-    setErrors(errorsData);
-    return errorsData;
-  };
+    const validateResult = validate(expense)
 
-  const handleSumbit = (e) => {
-    e.preventDefault();
-    const validateResult = validate(expense);
-    if (Object.keys(validateResult).length) return;
-    setExpenses((prevstate) => [
-      ...prevstate,
+    if (Object.keys(validateResult).length) return
+
+    if (editingRowId) {
+      setExpenses((prevState) =>
+        prevState.map((prevExpense) => {
+          if (prevExpense.id === editingRowId) {
+            return { ...expense, id: editingRowId }
+          }
+          return prevExpense
+        })
+      )
+      setExpense({
+        title: '',
+        category: '',
+        amount: '',
+      })
+      setEditingRowId('');
+      return
+    }
+
+    setExpenses((prevState) => [
+      ...prevState,
       { ...expense, id: crypto.randomUUID() },
-    ]);
+    ])
     setExpense({
-      title: "",
-      category: "",
-      amount: "",
-    });
-  };
+      title: '',
+      category: '',
+      amount: '',
+    })
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setExpense((prevstate) => ({ ...prevstate, [name]: value }));
-    setErrors({});
-  };
+    const { name, value } = e.target
+    setExpense((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+    setErrors({})
+  }
 
   return (
-    <form className="expense-form" onSubmit={handleSumbit}>
+    <form className="expense-form" onSubmit={handleSubmit}>
       <Input
         label="Title"
         id="title"
@@ -81,15 +110,16 @@ const ExpenseForm = ({ setExpenses }) => {
         onChange={handleChange}
         error={errors.title}
       />
-      
-      <Select label="Category"
+      <Select
+        label="Category"
         id="category"
         name="category"
         value={expense.category}
         onChange={handleChange}
-        options = {['Grocery', 'Clothes', 'Bills', 'Education', 'Medicine']}
-        defaultOption = 'Select Category'
-        error={errors.category} />
+        options={['Grocery', 'Clothes', 'Bills', 'Education', 'Medicine']}
+        defaultOption="Select Category"
+        error={errors.category}
+      />
       <Input
         label="Amount"
         id="amount"
@@ -98,9 +128,7 @@ const ExpenseForm = ({ setExpenses }) => {
         onChange={handleChange}
         error={errors.amount}
       />
-      <button className="add-btn bg-[#FFFAF3]">Add</button>
+      <button className="add-btn">{editingRowId ? 'Save' : 'Add'}</button>
     </form>
-  );
-};
-
-export default ExpenseForm;
+  )
+}

@@ -9,14 +9,21 @@ import Header from "../Header/Header.jsx";
 const Forms = () => {
 
   const [expenses, setExpenses] = useState(expenseData)
+  const [expense, setExpense] = useState({
+    title: "",
+    category: "",
+    amount: "",
+  });
+  const [editingRowId, setEditingRowId] = useState('')
+
   return (
     <>
     <Header/>
       <h2 className="text-4xl text-center mb-10">Track Your Expense</h2>
       <div className="expense-tracker-main container mx-auto px-8">
         <div className="expense-tracker">
-            <ExpenseForm setExpenses={setExpenses}/>
-            <ExpenseTable expenses={expenses} setExpenses={setExpenses}/>
+            <ExpenseForm setExpenses={setExpenses} expense={expense} setExpense={setExpense} editingRowId={editingRowId} setEditingRowId={setEditingRowId}/>
+            <ExpenseTable expenses={expenses} setExpenses={setExpenses} setExpense={setExpense} setEditingRowId={setEditingRowId}/>
         </div>
       </div>
     </>
