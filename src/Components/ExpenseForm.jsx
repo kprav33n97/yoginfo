@@ -14,7 +14,7 @@ const ExpenseForm = ({ setExpenses }) => {
   const validationConfig = {
     title: [
       { required: true, message: 'Please enter title' },
-      { minLength: 5, message: 'Title should be at least 5 characters long' },
+      { minLength: 3, message: 'Title should be at least 3 characters long' },
     ],
     category: [{ required: true, message: 'Please select a category' }],
     amount: [{ required: true, message: 'Please enter an amount' }],

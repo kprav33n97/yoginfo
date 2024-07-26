@@ -16,7 +16,7 @@ const Forms = () => {
       <div className="expense-tracker-main container mx-auto px-8">
         <div className="expense-tracker">
             <ExpenseForm setExpenses={setExpenses}/>
-            <ExpenseTable expenses={expenses}/>
+            <ExpenseTable expenses={expenses} setExpenses={setExpenses}/>
         </div>
       </div>
     </>
