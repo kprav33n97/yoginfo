@@ -18,13 +18,6 @@ const ExpenseForm = ({ setExpenses }) => {
     ],
     category: [{ required: true, message: 'Please select a category' }],
     amount: [{ required: true, message: 'Please enter an amount' }],
-    email: [
-      { required: true, message: 'Please enter an email' },
-      {
-        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-        message: 'Please enter a valid email',
-      },
-    ],
   }
 
   const validate = (formData) => {
@@ -42,15 +35,15 @@ const ExpenseForm = ({ setExpenses }) => {
     })
    })
 
-    if (!formData.title) {
-      errorsData.title = "Title is required";
-    }
-    if (!formData.category) {
-      errorsData.category = "Category is required";
-    }
-    if (!formData.amount) {
-      errorsData.amount = "Amount is required";
-    }
+    // if (!formData.title) {
+    //   errorsData.title = "Title is required";
+    // }
+    // if (!formData.category) {
+    //   errorsData.category = "Category is required";
+    // }
+    // if (!formData.amount) {
+    //   errorsData.amount = "Amount is required";
+    // }
 
 
     setErrors(errorsData);
