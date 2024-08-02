@@ -7,7 +7,7 @@ const ContextMenu = ({
   rowId,
   setExpense,
   expenses,
-  setEditingRowId
+  setEditingRowId,
 }) => {
   if (!menuPosition.left) return;
   return (
@@ -15,11 +15,13 @@ const ContextMenu = ({
       <div
         onClick={() => {
           // console.log(rowId);
-          const {title, category, amount} = expenses.find((expense) => expense.id === rowId);
+          const { title, category, amount } = expenses.find(
+            (expense) => expense.id === rowId
+          );
           // console.log(foundExpense)
-          setEditingRowId(rowId)
+          setEditingRowId(rowId);
 
-          setExpense({title, category, amount});
+          setExpense({ title, category, amount });
 
           setMenuPosition({});
         }}

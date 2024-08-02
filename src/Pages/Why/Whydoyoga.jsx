@@ -14,18 +14,6 @@ const Whydoyoga = () => {
   return (
     <>
       <Header />
-      {/* <div className="why-banner w-screen h-screen flex items-center justify-center flex-col text-center">
-        <h2>Why do yoga?</h2>
-        <ul>
-            <li>Boost brain funciton</li>
-            <li>Enhances respiratory health</li>
-            <li>Improves mental clarity</li>
-            <li>Boost immune system</li>
-            <li>Cures hairfall problems</li>
-        </ul>
-        <button className='shadow-dark shadow-lg px-4 py-2 rounded-md m-4'><Link to={`/`}>Back to Home</Link></button>
-      </div> */}
-
       <section className="single-page-banner pt-[65px] pb-20 bg-[#FFFAF3]">
         <div className="container mx-auto">
           <div className="banner-title">
@@ -33,7 +21,6 @@ const Whydoyoga = () => {
           </div>
         </div>
       </section>
-
       <section className="yoginfo-about py-20">
         <div className="container mx-auto">
           <div className="flex flex-wrap mx-[-15px]">
@@ -122,14 +109,15 @@ const Whydoyoga = () => {
           </div>
         </div>
       </section>
-
       <section className="yoginfo-service pb-10">
         <div className="container mx-auto">
           <div className="flex flex-wrap mx-[-15px]">
             <div className="basis-full md:basis-1/2 px-[15px]">
               <div className="yoginfo-service-col bg-[#FFFAF3] pt-12 px-12 h-full relative overflow-hidden">
                 <h5 className="font-semibold">Movement Improvement</h5>
-                <h2 className="text-4xl font-bold max-w-[400px] w-full leading-normal">Make the best of your yoga className</h2>
+                <h2 className="text-4xl font-bold max-w-[400px] w-full leading-normal">
+                  Make the best of your yoga className
+                </h2>
                 <img
                   className="yoginfo-parallax-effect"
                   src={img3}
@@ -140,7 +128,9 @@ const Whydoyoga = () => {
             <div className="basis-full md:basis-1/2 px-[15px]">
               <div className="yoginfo-service-col bg-[#222B37] text-white pt-12 px-12 h-full relative overflow-hidden">
                 <h5 className="font-semibold">Movement Improvement</h5>
-                <h2 className="text-4xl font-bold max-w-[400px] w-full leading-normal">Bring out the best of yourself</h2>
+                <h2 className="text-4xl font-bold max-w-[400px] w-full leading-normal">
+                  Bring out the best of yourself
+                </h2>
                 <img
                   className="yoginfo-parallax-effect"
                   src={img4}
