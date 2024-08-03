@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Cards.css";
+import Header from "../Header/Header";
+import { createPortal } from "react-dom";
 
-const Cards = () => {
+const Cards = ({ isOpen, setIsOpen }) => {
   const [advice, setAdvice] = useState("");
 
   useEffect(() => {
@@ -15,15 +17,22 @@ const Cards = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  return (
-    <div className="p-20">
+  return createPortal(
+    <div
+      onClick={() => setIsOpen(false)}
+      className={`p-20 quote-popup ${isOpen ? "" : "hidden"}`}
+    >
       <h2 className="text-center mb-4 text-4xl">Random Quote!</h2>
       <div className="card-container flex flex-wrap content-center rounded">
         <div className="advice-box w-80 mx-auto bg-white p-4 h-40 flex items-center justify-center text-center shadow-md">
           <h2>{advice}</h2>
         </div>
+        <div className="close-icon">
+          <button onClick={() => setIsOpen(false)}>🗙</button>
+        </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("portal")
   );
 };
 

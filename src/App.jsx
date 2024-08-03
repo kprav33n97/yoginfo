@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Hero />
-      <Cards />
+      {/* <Cards /> */}
       <Footer />
     </>
   );

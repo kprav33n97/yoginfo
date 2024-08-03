@@ -6,6 +6,7 @@ import Cards from "../Cards/Cards";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div
       className="header-main p-6 bg-white shadow-sm md:shadow-none"
@@ -41,8 +42,10 @@ const Header = () => {
                 <NavLink to={`/expense`}>Track your expenses</NavLink>
               </li>
               <li>
-                <a href="#">Get a random quote!</a>
-                <Cards />
+                <button onClick={() => setIsOpen(true)}>
+                  Get a random quote!
+                </button>
+                <Cards isOpen={isOpen} setIsOpen={setIsOpen} />
               </li>
             </ul>
           </div>

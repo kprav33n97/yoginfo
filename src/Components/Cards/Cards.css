@@ -26,3 +26,20 @@
 .card-title:hover {
   transform: scale(1.05); /* Slightly enlarge card on hover */
 }
+
+.quote-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
