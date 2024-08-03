@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
+import Cards from "../Cards/Cards";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -38,6 +39,10 @@ const Header = () => {
               <li>
                 {" "}
                 <NavLink to={`/expense`}>Track your expenses</NavLink>
+              </li>
+              <li>
+                <a href="#">Get a random quote!</a>
+                <Cards />
               </li>
             </ul>
           </div>
