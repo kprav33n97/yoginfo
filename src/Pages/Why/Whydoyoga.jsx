@@ -27,11 +27,14 @@ const Whydoyoga = () => {
             <div className="md:basis-1/2 px-[15px] basis-full">
               <div className="yoginfo-about-left pt-[40px] px-[40px] bg-[#FFFAF3] rounded-b-[500px]">
                 <div className="yoginfo-section-title mb-[30px]">
-                  <h3 className="text-4xl m-0">Why do yoga?</h3>
+                  <h3 className="text-4xl m-0">Increasing Physical Strength</h3>
                 </div>
-                <p className="text-lg">
-                  I'm <b>John Doe</b>, a Certified Yoga Instructor, Many Styles
-                  Of Yoga To Suit Everyone Morbi lobortis.
+                <p className="text-lg pb-3">
+                  Increasing <b>physical strength</b> and <b>immunity</b>
+                  involves a combination of lifestyle choices, including
+                  exercise, nutrition, sleep, and overall health habits. Here
+                  are some scientifically proven methods to enhance physical
+                  strength and immunity:
                 </p>
                 <img
                   className="yoginfo-parallax-effect my-0 mx-auto"
@@ -49,12 +52,14 @@ const Whydoyoga = () => {
                         <img src={vinayasaYoga} alt="Vinyasa Yoga" />
                       </div>
                       <h5 className="my-[15px] text-bold text-[20px]">
-                        Vinyasa Yoga
+                        Resistance Training:
                       </h5>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        Engaging in regular resistance training, such as
+                        weightlifting, bodyweight exercises, or resistance band
+                        workouts, helps build muscle mass and strength. Studies
+                        show that progressive overload (gradually increasing the
+                        weight or resistance) is key to muscle growth.
                       </p>
                     </div>
                   </div>
@@ -64,12 +69,18 @@ const Whydoyoga = () => {
                         <img src={intutiveYoga} alt="Intuitive Yoga" />
                       </div>
                       <h5 className="my-[15px] text-bold text-[20px]">
-                        Intuitive Yoga
+                        Proper Nutrition:
                       </h5>
+                      <p className="pb-4">
+                        <b>Protein Intake:</b> Consuming adequate protein is
+                        crucial for muscle repair and growth. Sources include
+                        lean meats, dairy, legumes, and plant-based proteins.
+                      </p>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        <b>Balanced Diet:</b> A diet rich in whole foods,
+                        including fruits, vegetables, whole grains, and healthy
+                        fats, provides the necessary nutrients for overall
+                        health and muscle function.
                       </p>
                     </div>
                   </div>
@@ -79,12 +90,13 @@ const Whydoyoga = () => {
                         <img src={hathaYoga} alt="Hatha Yoga" />
                       </div>
                       <h5 className="my-[15px] text-bold text-[20px]">
-                        Hatha Yoga
+                        Adequate Rest and Recovery:
                       </h5>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        Muscles grow and strengthen during rest periods, not
+                        just during workouts. Ensuring sufficient sleep (7-9
+                        hours per night) and allowing time for muscle recovery
+                        are essential for strength gains.
                       </p>
                     </div>
                   </div>
@@ -94,12 +106,13 @@ const Whydoyoga = () => {
                         <img src={slowYoga} alt="Slow Yoga" />
                       </div>
                       <h5 className="my-[15px] text-bold text-[20px]">
-                        Slow Yoga
+                        Consistency and Progression:
                       </h5>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        Regular and consistent exercise is essential for
+                        building strength. Gradually increasing the intensity,
+                        duration, or difficulty of workouts helps prevent
+                        plateaus and promotes continual improvement.
                       </p>
                     </div>
                   </div>
