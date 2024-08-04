@@ -1,0 +1,31 @@
+.s2-data-heading {
+  font-size: calc(1.2rem + 1vw);
+  line-height: normal;
+  font-weight: normal;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.s2-data-para {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  color: #71758c;
+}
+
+.s2-btn {
+  font-family: "Poppins";
+  background-color: #fff;
+  border: 0;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s 0s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.s2-data-para li {
+  margin-bottom: 8px;
+}
