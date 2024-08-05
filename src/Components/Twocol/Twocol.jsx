@@ -19,36 +19,16 @@ const Twocol = () => {
                 Goal Setting!
               </h3>
 
-              <ul className="mb-8 s2-data-para">
-                <li>
-                  1. Goal setting - First step is setting a goal with crystal
-                  clarity exactly what you want with exact measurement like 60kg
-                  weight, 50k salary exact unit should be specified.
-                </li>
-                <li>
-                  2. Identification of distraction -To kill the distraction
-                  direction should be clear. Rules:
-                  <ul>
-                    <li>
-                      ◉ Morning time for exercises. Squats, pushups, arms
-                      strecher, anulom vilom, kapalbhati, marma massage.
-                    </li>
-                    <li>◉ Evening time for reading.</li>
-                    <li>◉ Night time for learning new things on youtube.</li>
-                  </ul>
-                </li>
-                <li>
-                  3. Raise your standard - Consistency and Progression:
-                  <p>
-                    Gradually increasing the intensity, duration, or difficulty
-                    of workouts helps prevent plateaus and promotes continual
-                    improvement.
-                  </p>
-                </li>
-              </ul>
-              <a href="#" className="s2-btn">
-                Know more
-              </a>
+              <p className="mt-4 s2-data-para">
+                If you want to get at your hidden resources, stimulate your
+                growth and your power, you must be continually improving
+                yourself somewhere; increasing your intelligence by closer and
+                keener observation, by the constant improving of your knowledge,
+                the, broadening of your mental and spiritual outlook, the
+                getting away from self, and the enlarging of your sphere of
+                service and helpfulness. Stop fearing change. Be confident in
+                your ability to meet challenges with new and imaginative ideas.
+              </p>
             </div>
           </div>
         </div>
