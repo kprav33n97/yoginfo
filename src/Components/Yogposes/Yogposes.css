@@ -1,0 +1,20 @@
+.yogposes-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 350px;
+}
+
+.show-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.show-more-button:hover {
+  background-color: #fffaf3;
+}

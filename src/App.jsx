@@ -5,6 +5,7 @@ import Hero from "./Components/Hero/Hero";
 import Footer from "./Components/Footer/Footer";
 import { Suspense } from "react";
 import Twocol from "./Components/Twocol/Twocol";
+import Yogposes from "./Components/Yogposes/Yogposes";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Hero />
         <Twocol />
+        <Yogposes />
         <Footer />
       </Suspense>
     </>
