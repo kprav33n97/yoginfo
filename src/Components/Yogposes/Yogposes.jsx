@@ -38,7 +38,7 @@ const Yogposes = () => {
         </div>
         <div className="yogposes-section flex flex-wrap  justify-center gap-10 mt-10">
           {filteredData.slice(0, itemsToShow).map((item, index) => (
-            <div className="yogposes-card md:basis-1/3 p-4">
+            <div className="yogposes-card p-4">
               <div className="yogpose-img">
                 <img src={item.img_url} alt="Navasana" width={250} />
               </div>
